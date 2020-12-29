@@ -1,0 +1,134 @@
+.footer {
+  background-color: $primary;
+  padding: 36px 0 28px;
+  a {
+    transform: translateY(0px);
+    transition: .3s;
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+  p {
+    font-size: 36px;
+    margin-bottom: 20px;
+    img {
+      width: 48px;
+      margin-right: 12px;
+    }
+  }
+}
+.footer-nav {
+  margin-bottom: 32px;
+  li + li {
+    margin-left: 48px;
+  } 
+  a {
+    font-size: 16px;
+  }
+}
+.footer-copyright {
+  padding-top: 24px;
+  border-top: 1px solid #fff;
+  color: #fff;
+}
+.footer-logo {
+  img {
+    margin-right: 38px;
+  }
+  span {
+    font-size: 16px;
+  }
+}
+.policy {
+  margin-left: auto;
+  li:first-child {
+    margin-right: 62px;
+  }
+  a {
+    font-size: 14px;
+  }
+}
+.footer-social {
+  margin-left: auto;
+  li {
+    margin-left: 32px;
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    padding: 40px 0;
+    p {
+      font-size: 20px;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 28px;
+      }
+      img {
+        width: 28px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .footer-nav {
+    margin-bottom: 24px;
+    li + li {
+      margin-left: 40px;
+    }
+  }
+  .footer-social {
+    li {
+      margin-left: 24px;
+    }
+    img {
+      width: 24px;
+    }
+  }
+  .footer-logo img{
+    display: none;
+  }
+  .policy {
+    li:first-child {
+      margin-right: 24px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 24px 0 21px;
+    p {
+      font-size: 16px;
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 24px;
+      }
+      img {
+        width: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .footer-nav {
+    display: none;
+  }
+  .footer-copyright {
+    flex-direction: column;
+    align-items: start;
+    padding-top: 18px;
+    position: relative;
+  }
+  .footer-logo img {
+    display: block;
+    width: 46px;
+    margin-right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .policy {
+    display: block;
+    margin-left: 0;
+    li {
+      margin-top: 8px;
+    }
+  }
+} 

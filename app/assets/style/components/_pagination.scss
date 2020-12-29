@@ -1,0 +1,29 @@
+.pagination {
+  .active {
+    background-color: #000;
+    a {
+      color: #fff;
+    }
+  }
+}
+.page-item {
+  border: 1px solid #555;
+  border-right: 0;
+  &:last-child {
+    background-color: #F2F2F2;
+    border-right: 1px solid #555;  
+  }  
+}
+.page-link {
+  color: #555;
+  padding: 10px 15px;
+  font-size: 18px;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  @include mobile {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}

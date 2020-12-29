@@ -1,0 +1,169 @@
+.nav-blog {
+  background-color: $secondary;
+  ul {
+    @include mobile {
+      max-width: 345px;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  li {
+    margin-right: 48px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include pad {
+      margin-right: 32px;
+    }
+    @include mobile {
+      margin-right: auto;
+    }
+  }
+  &__link {
+    font-size: 20px;
+    padding: 13px 0;
+    transform: translateY(0px);
+    transition: .5s;
+    &:hover {
+      transform: translateY(-3px);
+    }
+    @include pad {
+      font-size: 16px;
+      padding: 16px 0;
+    }
+  }
+}
+.search {
+  margin-left: auto;
+  &:hover input, input:focus {
+    width: 100px;
+    padding: 7px 10px;
+    border-radius: 50px;
+    background-color: #fff;
+  }
+  form {
+    font-size: 0;
+  }
+  input, button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+  input {
+    width: 0;
+    transition: .5s;
+  }
+}
+.blog {
+  padding: 82px 0 156px;
+  @include pad {
+    padding: 40px 0 104px;
+  }
+  @include mobile {
+    padding: 24px 0 56px;
+  }
+  &__item {
+    margin-bottom: 60px;
+    transition: .5s;
+    @include pad {
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 26px;
+    }
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0px 10px 10px -10px rgba(#000, .1);
+      transform: translate(-3px, -5px);
+    }
+  }
+  &__cover {
+    @include pad {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__info {
+    width: 445px;
+    margin-left: 30px;
+    @include pad {
+      width: 50%;
+    }
+    @include mobile {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
+  &__title {
+    color: $secondary;
+    @include pad {
+      font-size: 20px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  &__subtitle {
+    @include pad {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  &__txt {
+    margin-top: 24px;
+    @include pad {
+      margin-top: 16px;
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  &__txt, .date {
+    color: #555;
+    @include pad {
+      font-size: 14px;
+    }
+  }
+  &__more {
+    border: none;
+    background-color: transparent;
+    font-weight: 900;
+    color: $secondary;
+    &:hover {
+      color: $primary;
+      animation: move .8s infinite;
+    }
+    @include pad {
+      display: none;
+    }
+  }
+  &__more-sm {
+    color: #555;
+    padding: 0 8px 5px;
+    &:hover {
+      color: $primary;
+      background-color: $light;
+      font-weight: bold;
+      border-radius: 20px;
+      animation: move .8s infinite;
+    }
+  }
+}
+@keyframes move {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(5px);color: $secondary; }
+  100% { transform: translateX(0px); }
+}

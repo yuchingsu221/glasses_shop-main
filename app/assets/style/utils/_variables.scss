@@ -1,0 +1,31 @@
+// color
+$primary: #AA0601;
+$secondary: #650300;
+$light: #AA06010D;
+$product-dark: #5F3E2D;
+$product-light: #B75929;
+
+// font-family
+$font-family-base: -apple-system, BlinkMacSystemFont, // Mac 
+                    "Segoe UI", "Microsoft JhengHei", // 微軟
+                    'Noto Sans TC', Roboto,
+                    "Helvetica Neue", Arial,
+                    sans-serif; // 無襯線體
+$font-family-Noto: 'Noto Sans TC', sans-serif;
+
+// font-size
+$font-size-base: 16px;
+
+$h1-font-size: $font-size-base * 4; // 64px
+$h2-font-size: $font-size-base * 3; // 48px
+$h3-font-size: $font-size-base * 2.25; // 36px
+$h4-font-size: $font-size-base * 2; // 32px
+$h5-font-size: $font-size-base * 1.5; // 24px
+$h6-font-size: $font-size-base * 1.25; // 20px
+
+$font-size-sm: $font-size-base * 0.875; //14px
+
+// sapcing
+$sapcing: 8px;
+.pt-8 { padding-top: $sapcing*8 }
+.pb-10 { padding-top: $sapcing*10 }

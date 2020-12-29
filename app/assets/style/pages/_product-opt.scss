@@ -1,0 +1,189 @@
+.nav-products {
+  &__item {
+    border: 1px solid #DCDCDC;
+    width: 462px;
+    @include mobile {
+      width: initial;
+      flex-grow: 1;
+    }
+  }
+  .active {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 16px;
+      left: 0;
+      right: 0;
+      background-color: $primary;
+      @include pad {
+        height: 8px;
+      }
+      @include mobile {
+        height: 4px;
+      }
+    }
+  }
+  &__link {
+    color: #000;
+    font-size: 42px;
+    padding: 24px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    position: relative;
+    @include pad {
+      padding: 16px 0;
+      font-size: 28px;
+    }
+    @include mobile {
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      height: 16px;
+      background-color: lighten($primary, 50%);
+      transition: .3s;
+      @include pad {
+        height: 8px;
+      }
+      @include mobile {
+        height: 4px;
+      }
+    }
+    &:hover:after {
+      left: 0;
+      right: 0;
+      background-color: $primary;
+    }
+  }
+  &__icon {
+    margin-right: 8px;
+    @include pad {
+      @include size(32px, 32px);
+    }
+    @include mobile {
+      margin-right: 5px;
+      @include size(14px, 14px);
+    }
+  }
+}
+.banner-products {
+  &__img {
+    width: calc(100%/2 - 15px);
+    @include pad {
+      width: 50%;
+    }
+  }
+}
+// 兩個系列產品頁共用 products 開頭
+.products-padding {
+  padding: 88px 0 156px;
+  @include pad {
+    padding: 40px 0 104px;
+  }
+  @include mobile {
+    padding: 30px 0 56px;
+  }
+}
+.products-eng-title,.products-title {
+  text-align: center;
+}
+.products-eng-title {
+  font-size: 42px;
+  line-height: 1.5;
+  @include pad {
+    font-size: 32px;
+  }
+  @include mobile {
+    font-size: 20px;
+  }
+}
+.products-title {
+  margin-bottom: 40px;
+  @include pad {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+  @include mobile {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+.products-item-link {
+  overflow: hidden;
+  position: relative;
+  &:before {
+    content: '查看更多';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#000, .7);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+  }
+  &:hover:before {
+    opacity: 1;
+  }
+}
+.products-item-name {
+  flex-grow: 1;
+  text-transform: uppercase;
+  @include mobile {
+    font-size: 16px;
+  }
+}
+.products-item-price {
+  color: $primary;
+  font-weight: 500;
+  @include mobile {
+    font-size: 16px;
+  }
+}
+.products-color-dark, .products-color-light {
+  @include size(24px, 24px);
+  border-radius: 4px;
+  @include mobile {
+    @include size(16px, 16px);
+  }
+}
+.products-color-dark {
+  background-color: $product-dark;
+  margin-right: 8px;
+  @include mobile {
+    margin-right: 4px;
+  }
+}
+.products-color-light {
+  background-color: $product-light;
+}
+
+// optical 
+.optical {
+  &__item {
+    width: 255px;
+    margin: 0 15px 104px;
+    @include pad {
+      width: 330px;
+      margin: 0 15px 72px;
+    }
+    @include mobile {
+      max-width: 345px;
+      width: 100%;
+      margin: 0 15px 32px;
+    }
+  }
+  &__item-img {
+    height: 164px;
+  }
+}

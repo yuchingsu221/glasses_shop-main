@@ -1,0 +1,66 @@
+.navbar {
+  background-color: $primary;
+  padding: 30px 88px;
+}
+.navbar-menu {
+  a {
+    font-size: 20px;
+    margin-left: 64px;
+    position: relative;
+    padding: 8px 0;
+    &:hover:after {
+      left: 0;
+      right: 0;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      height: 2px;
+      background-color: #fff;
+      bottom: 0px;
+      transition: .3s;
+    }
+  }
+}
+// Pad
+@media (max-width: 992px) {
+  .navbar {
+    padding: 30px 39px;
+  }
+  .navbar-menu a {
+    margin-left: 40px;
+  }
+}
+// Mobil
+@media (max-width: 767px) {
+  .navbar {
+    display: block;
+    padding: 0px;
+  }
+  .logo {
+    padding: 10px 0;
+    text-align: center;
+    img {
+      width: 48px;
+    }
+  }
+  .navbar-menu {
+    justify-content: center;
+    li {
+      width: 50%;
+      text-align: center;
+      border: 1px solid #fff;
+    }
+    a {
+      margin-left: 0px;
+      &:hover {
+        background-color: darken($primary, 20%);
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

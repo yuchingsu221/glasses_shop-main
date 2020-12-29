@@ -1,0 +1,38 @@
+.sunglasses {
+  &__item {
+    width: 350px;
+    margin: 0 15px 112px;
+    @include pad {
+      width: 330px;
+      margin: 0 15px 72px;
+    }
+    @include mobile {
+      max-width: 345px;
+      width: 100%;
+      margin: 0 15px 32px;
+    }
+  }
+  &__item-img {
+    height: 224px;
+  }
+  .products-item-name, .products-item-price {
+    font-size: 18px;
+    margin-bottom: 8px;
+    @include pad {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  .products-color-dark, .products-color-light {
+    @include size(19px, 19px);
+    @include pad {
+      @include size(24px, 24px);
+    }
+    @include mobile {
+      @include size(16px, 16px);
+    }
+  }
+}

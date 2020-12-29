@@ -1,0 +1,29 @@
+$grid-columns:      12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  // Medium screen / tablet
+  md: 767px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  @include pad {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 39px;
+  }
+  @include mobile {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+.row {
+  margin: 0 -15px;
+}

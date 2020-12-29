@@ -1,0 +1,161 @@
+.breadcrumb {
+  margin-top: 8px;
+  margin-bottom: 17px;
+  @include pad {
+    margin-bottom: 8px;
+  }
+  li:last-child a {
+    color: $primary;
+  }
+  li + li {
+    margin-left: 10px;
+    &:before {
+      content: "/";
+      margin-right: 10px;
+    }
+  }
+  a {
+    color: #000;
+    display: inline-block;
+    &:hover {
+      color: $primary;
+    }
+    @include pad {
+      font-size: 14px;
+    }
+  }
+}
+.article {
+  &__tags {
+    a {
+      font-size: 24px;
+      font-weight: bold;
+      color: $primary;
+      margin-right: 16px;
+      &:hover {
+        color: $secondary;
+      }
+      @include pad {
+        font-size: 16px;
+      }
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+  &__main {
+    width: 74%;
+    margin-right: 30px;
+    @include mobile {
+      width: 100%;
+      margin-right: 0px;
+    }
+  }
+  &__title {
+    @include pad {
+      font-size: 32px;
+    }
+    @include mobile {
+      font-size: 20px;
+      color: $primary;
+    }
+  }
+  &__subtitle {
+    font-size: 28px;
+    @include pad {
+      font-size: 16px;
+    }
+  }
+  &__content {
+    margin-top: 23px;
+    @include pad {
+      margin-top: 16px;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 24px;
+      margin-bottom: 36px;
+      color: #555;
+      font-weight: bold;
+      @include pad {
+        font-size: 16px;
+        margin-top: 16px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .share {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 16px;
+    p {
+      font-weight: bold;
+      @include pad {
+        font-size: 16px;
+      }
+    }
+    a {
+      margin-left: 16px;
+    }
+    img {
+      @include pad {
+        @include size(20px,20px)
+      }
+    }
+  }
+  .golink {
+    margin-bottom: 304px;
+    @include pad {
+      margin-bottom: 104px;
+    }
+    @include mobile {
+      margin-bottom: 39px;
+    }
+    img {
+      @include mobile {
+        @include size(16px,16px)
+      }
+    }
+    a {
+      color: #000;
+      font-size: 19px;
+      @include pad {
+        font-size: 16px;
+      }
+      &:first-child img {
+        margin-right: 8px;
+      }
+      &:last-child img {
+        order: 1;
+        margin-left: 8px;
+        @include mobile {
+          order: 0;
+          margin-right: 8px;
+          margin-left: 0;
+        }
+      }
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .tags {
+    font-size: 28px;
+    color: $primary;
+    width: 26%;
+    @include mobile {
+      width: 100%;
+      margin-bottom: 56px;
+    }
+    img {
+      @include pad {
+        @include size(24px,24px)
+      }
+    }
+    h3 {
+      @include pad {
+        font-size: 20px;
+      }
+    }
+  }
+}
